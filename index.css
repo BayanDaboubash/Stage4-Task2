@@ -1,0 +1,167 @@
+body{
+    padding: 40px;
+    font-family:sans-serif;
+}
+
+.navbar{
+    color:rgb(97, 196, 235);
+    cursor: pointer;
+}
+
+.navbar span{
+    color:black;
+}
+
+.orderNo{
+margin-top: 3%;
+}
+
+.orderPl {
+    margin-top: 13px;
+
+}
+.orderPl span{
+font-weight: bolder;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    row-gap: 30px;
+    column-gap:20px;
+}
+.product{
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 5px;
+    grid-column: 1 / 6;
+
+}
+.table{
+    border:0px;
+    border-bottom: 1px solid rgb(201, 201, 201) ;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+}
+.table div{
+    display: flex;
+    flex-direction: column;
+    line-height: 55px;
+
+}
+.secondPart{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.Address{
+    background-color: rgba(217, 236, 243, 0.836);
+    margin-top: 30px;
+    padding: 15px 10px;
+    border-radius:5px;
+    grid-column: span 2/ 8;
+    max-width:fit-content;
+}
+.Address section p{
+    color:rgb(73, 72, 72);
+    font-weight: lighter;
+    font-size: 15px;
+    line-height: 12px;
+}
+.Address section:not(:first-child){
+ border-top:1px solid rgb(175, 172, 172) ;
+}
+.btn1,.btn2,.btn3{
+    margin-top: 20px;
+    width: 140px;
+    padding: 10px  15px;
+    border-radius:20px;
+    background-color:transparent;
+    border:1px solid rgb(97, 196, 235);
+    color:rgb(97, 196, 235);
+    cursor: pointer;
+}
+.btn3{
+    border:0px;
+    width: 160px;
+    color:red;
+}
+.btn{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);  
+}
+
+.btn3{
+    grid-column: 5/ 6;
+
+}
+
+.btn2{
+    grid-column: span 1/ 3;
+
+}
+
+.btn1{
+    grid-column: span 1/ 2;
+
+}
+
+  
+  @media only screen and (max-width: 1200px) {
+      body{
+          background-color:rgb(228, 228, 228)
+      }
+      .all{
+          background-color:white;
+          padding: 20px;
+      }
+    .container{
+        display:block;
+     }   
+     .product{
+       width: 85%;
+    }
+
+    .pro{
+        display: none;
+    }
+    .Address{
+        max-width: 91%;
+
+    }
+     }
+  
+     @media only screen and (max-width: 850px) {
+       .container{
+        display:block;
+     }   
+     .navbar{
+         display: none;
+     }
+     .pro{
+        display: none;
+    }
+    .Address{
+        max-width: 96%;
+
+    }
+    .table div:not(:first-child){
+        flex-direction: row;
+        justify-content:space-evenly;
+        line-height: 35px;
+        flex-wrap: wrap;
+    }
+    .table{  
+        flex-direction: column;
+    }
+    .pro{
+        display: none;
+    }
+    .btn3{
+        grid-column: 2/ 1;
+    
+    }
+     }
